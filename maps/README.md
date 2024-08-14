@@ -1,8 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I used map and functionalities provided by "tomtom web sdk" and added extra functionality to the map. I added extra features to it which will be very helpful in developing my big project "Grocin-5".
+Note: these changes are made to meet the requirements of my personal project "Grocin_5". 
+I added some extra features :
+1. Move marker to the selected search results automatically.
+2. Auto-fetching and reverse geocoding of marker position/coordinates.
+3. Attached custom pop-ups to marker.
