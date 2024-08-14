@@ -10,14 +10,14 @@ import SearchMarkersManager from "../assets/mapsAssets/SearchMarkerManager";
 import DomHelpers from "../assets/mapsAssets/DomHelpers";
 import Formatters from "../assets/mapsAssets/Formatters";
 import tt from "@tomtom-international/web-sdk-maps";
+import { apiKey } from "../utils";
 
 function MapView() {
   // console.log(tt);
 
-  //   https://api.tomtom.com/search/2/reverseGeocode/52.157831,5.223776.json?key=AL4E1LlNn2lrxJEG01RmqehBEq9rUXVf&radius=100
 
   function getAddress(lat,lng,popup) {
-    let apiUrl = `https://api.tomtom.com/search/2/reverseGeocode/${lat},${lng}.json?key=AL4E1LlNn2lrxJEG01RmqehBEq9rUXVf&radius=100`; // Replace with your API endpoint URL
+    let apiUrl = `https://api.tomtom.com/search/2/reverseGeocode/${lat},${lng}.json?key=${apiKey}&radius=100`; // Replace with your API endpoint URL
 
     // Make a GET request
     fetch(apiUrl)
@@ -54,7 +54,7 @@ function MapView() {
     tt.setProductInfo("shopifresh", "v1");
 
     var map = tt.map({
-      key: "AL4E1LlNn2lrxJEG01RmqehBEq9rUXVf",
+      key: apiKey,
       container: "map",
       center: [15.4, 53.0],
       zoom: 3,
@@ -123,14 +123,14 @@ function MapView() {
 
     // Options for the fuzzySearch service
     var searchOptions = {
-      key: "AL4E1LlNn2lrxJEG01RmqehBEq9rUXVf",
+      key: apiKey,
       language: "en-GB",
       limit: 10,
     };
 
     // Options for the autocomplete service
     var autocompleteOptions = {
-      key: "AL4E1LlNn2lrxJEG01RmqehBEq9rUXVf",
+      key: apiKey,
       language: "en-GB",
     };
 

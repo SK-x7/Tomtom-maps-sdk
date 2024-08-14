@@ -23,7 +23,7 @@ function Map() {
   const [area,setArea]=useState();
   
   function getMarkerAddress(lat,lng) {
-    let apiUrl = `https://api.tomtom.com/search/2/reverseGeocode/${lat},${lng}.json?key=AL4E1LlNn2lrxJEG01RmqehBEq9rUXVf&radius=100`; // Replace with your API endpoint URL
+    let apiUrl = `https://api.tomtom.com/search/2/reverseGeocode/${lat},${lng}.json?key=${apiKey}&radius=100`; // Replace with your API endpoint URL
 
     // Make a GET request
     fetch(apiUrl)
@@ -60,7 +60,7 @@ function Map() {
   
   
   function getAddress(lat,lng,popup) {
-    let apiUrl = `https://api.tomtom.com/search/2/reverseGeocode/${lat},${lng}.json?key=AL4E1LlNn2lrxJEG01RmqehBEq9rUXVf&radius=100`; // Replace with your API endpoint URL
+    let apiUrl = `https://api.tomtom.com/search/2/reverseGeocode/${lat},${lng}.json?key=${apiKey}&radius=100`; // Replace with your API endpoint URL
 
     // Make a GET request
     fetch(apiUrl)
@@ -162,14 +162,14 @@ function Map() {
   //SECTION - options
   
   const searchOptions = {
-    key: "AL4E1LlNn2lrxJEG01RmqehBEq9rUXVf",
+    key: apiKey,
     language: "en-GB",
     limit: 15,
   };
 
   // Options for the autocomplete service
   const autocompleteOptions = {
-    key: "AL4E1LlNn2lrxJEG01RmqehBEq9rUXVf",
+    key: apiKey,
     language: "en-GB",
   };
 
